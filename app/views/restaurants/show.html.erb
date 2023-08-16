@@ -1,0 +1,15 @@
+<div class="container mt-5">
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.address %></p>
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <div id="list"><li class="list-group-item"><%= review.content %>----<%= review.rating %>/5 stars</li></div>
+  <% end %>
+</ul>
+<br>
+<button id="list" class="btn btn-outline-secondary"><%= link_to "Add a review", new_restaurant_review_path(@restaurant) %></button>
+<br>
+<br>
+<button id="list" class="btn btn-outline-secondary"><%= link_to "all restaurants", restaurants_path %></button>
+</div>

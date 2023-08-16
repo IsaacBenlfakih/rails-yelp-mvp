@@ -1,0 +1,11 @@
+<div class="container mt-5">
+<h1>All Restaurants</h1>
+<br>
+<ol class="list-group">
+<% @restaurants.each do |restaurant| %>
+<div id="list"><li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li></div>
+<% end %>
+</ol>
+<br>
+<button id="list" class="btn btn-outline-secondary"><%= link_to "create restaurant", new_restaurant_path %></button>
+</div>
